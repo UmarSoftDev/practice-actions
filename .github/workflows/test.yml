@@ -1,0 +1,12 @@
+name: test-workflow
+on: push
+jobs:
+  first-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v6
+      - name: install dependency
+        run: npm install
+      - name: Run Test
+        run: npm run test
